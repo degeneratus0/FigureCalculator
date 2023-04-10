@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FigureCalculator", "FigureCalculator\FigureCalculator.csproj", "{85936652-AC38-4AB7-9816-48B83D84223D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FigureCalculatorTests", "FigureCalculatorTests\FigureCalculatorTests.csproj", "{FF6D62FB-D1EF-4F04-94CC-2A8A6CE74991}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85936652-AC38-4AB7-9816-48B83D84223D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85936652-AC38-4AB7-9816-48B83D84223D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85936652-AC38-4AB7-9816-48B83D84223D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85936652-AC38-4AB7-9816-48B83D84223D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF6D62FB-D1EF-4F04-94CC-2A8A6CE74991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF6D62FB-D1EF-4F04-94CC-2A8A6CE74991}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF6D62FB-D1EF-4F04-94CC-2A8A6CE74991}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF6D62FB-D1EF-4F04-94CC-2A8A6CE74991}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD6587E3-82AB-4BD2-99D4-6BF6A432E3AA}
+	EndGlobalSection
+EndGlobal
