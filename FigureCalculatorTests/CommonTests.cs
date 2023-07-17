@@ -18,9 +18,9 @@ namespace FigureCalculatorTests
         }
 
         [TestCaseSource(nameof(FiguresWithExpectedAreas))]
-        public void IsAreaCorrectTests(IFigure figure, double expectedArea)
+        public void IsAreaCorrectTests(Figure figure, double expectedArea)
         {
-            Assert.AreEqual(expectedArea, figure.GetArea(), 0.0001, "Calculated area was different then expected");
+            Assert.AreEqual(expectedArea, figure.Area, 0.0001, "Calculated area was different then expected");
         }
     }
 }

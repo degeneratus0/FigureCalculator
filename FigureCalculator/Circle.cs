@@ -1,8 +1,9 @@
 ﻿namespace FigureCalculator
 {
-    public class Circle : IFigure
+    public class Circle : Figure
     {
-        public double Radius { get; set; }
+        public double Radius { get; }
+        public override double Area { get; }
 
         public Circle(double radius)
         {
@@ -11,9 +12,10 @@
                 throw new ArgumentException("Radius must not be negative");
             }
             Radius = radius;
+            Area = GetArea();
         }
 
-        public double GetArea()
+        private double GetArea()
         {
             return Math.PI * Math.Pow(Radius, 2);
         }

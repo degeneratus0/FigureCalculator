@@ -44,16 +44,11 @@ namespace FigureCalculatorTests
             Assert.AreEqual(a + b + c, triangle.Perimeter, "Perimeter wasn't calculated correctly");
         }
 
-        [TestCase(3, 4, 5)]
-        public void IsRightTriangleTest(double a, double b, double c)
+        [TestCase(3, 4, 5, true)]
+        [TestCase(3, 4, 6, false)]
+        public void IsRightTriangleTest(double a, double b, double c, bool isRight)
         {
-            Assert.True(new Triangle(a, b, c).IsRightTriangle, "Triangle wasn't right");
-        }
-
-        [TestCase(3, 4, 6)]
-        public void IsNotRightTriangleTest(double a, double b, double c)
-        {
-            Assert.False(new Triangle(a, b, c).IsRightTriangle, "Triangle was right");
+            Assert.AreEqual(isRight, new Triangle(a, b, c).IsRightTriangle, "Triangle rightness wasn't determined correctly");
         }
     }
 }

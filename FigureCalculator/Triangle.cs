@@ -1,25 +1,14 @@
 ﻿namespace FigureCalculator
 {
-    public class Triangle : IFigure
+    public class Triangle : Figure
     {
-        public double Side1 { get; set; }
-        public double Side2 { get; set; }
-        public double Side3 { get; set; }
+        public double Side1 { get; }
+        public double Side2 { get; }
+        public double Side3 { get; }
 
-        public double Perimeter { 
-            get
-            {
-                return Side1 + Side2 + Side3;
-            } 
-        }
-
-        public bool IsRightTriangle
-        {
-            get
-            {
-                return IsRight();
-            }
-        }
+        public double Perimeter { get; }
+        public override double Area { get; }
+        public bool IsRightTriangle { get; }
 
         public Triangle(double side1, double side2, double side3)
         {
@@ -33,9 +22,10 @@
                 throw new ArgumentException("Every side of a triangle must be less then sum of two other sides");
             }
 
-            Side1 = side1;
-            Side2 = side2;
-            Side3 = side3;
+            (Side1, Side2, Side3) = (side1, side2, side3);
+            Perimeter = Side1 + Side2 + Side3;
+            Area = GetArea();
+            IsRightTriangle = IsRight();
         }
 
         private bool IsRight()
@@ -48,13 +38,13 @@
                 squareSide2 + squareSide3 == squareSide1;
         }
 
-        public double GetArea()
+        private double GetArea()
         {
             double halfPerimeter = Perimeter / 2d;
             return Math.Sqrt(
-                halfPerimeter * 
-                (halfPerimeter - Side1) * 
-                (halfPerimeter - Side2) * 
+                halfPerimeter *
+                (halfPerimeter - Side1) *
+                (halfPerimeter - Side2) *
                 (halfPerimeter - Side3)
                 );
         }
